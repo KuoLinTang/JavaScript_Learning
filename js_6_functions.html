@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript Functions</title>
+</head>
+
+<body>
+    <script>
+
+        function divide1(n1, n2) {
+            console.log(n1 / n2);
+            return n1 / n2;
+        };
+        let a = divide1(10, 5);
+
+        let divide2 = function (n1, n2) {
+            console.log(n1 / n2);
+            return  // no return value -> undefined
+        };
+        let b = divide2(10, 5);
+
+        console.log(a);
+        console.log(b);
+
+    </script>
+</body>
+
+</html>

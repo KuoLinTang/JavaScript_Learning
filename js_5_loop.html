@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript Loop</title>
+</head>
+
+<body>
+    <script>
+
+        // while loop
+        let a = prompt('Please enter an integer', '');
+        while (a > 0) {
+            console.log(a);
+            a--;
+        };
+
+        // for loop
+        let b = prompt('Please enter another integer', '');
+        for (let n = 0; n <= b; n++) {
+            console.log(n);
+        };
+
+        // practice: calculate 1+2+...+n
+        // using for loop
+        let c = prompt('Please enter the third integer', '');
+        let x = 0;
+        for (let n = 0; n <= c; n++) {
+            x += n;
+        };
+        console.log('The result is ' + x.toString());
+
+        // using while loop
+        let d = 0;
+        let y = 0;
+        while (d <= c) {
+            y += d;
+            d++;
+        };
+        console.log('The result is ' + y.toString());
+
+        // break and continue
+        // print all even number
+        let e = prompt('Please enter the fourth integer', '');
+        let z = 1;
+        while (z <= e) {
+            if (z % 2 != 0) {
+                continue;
+            };
+            console.log(z);
+            z++;
+        };
+        // print all even number
+        for (let n = 0; n <= e; n++) {
+            if (n == 3) {
+                break;
+            };
+            console.log(n);
+        };
+
+    </script>
+</body>
+
+</html>

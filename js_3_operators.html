@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript Operators</title>
+</head>
+
+<body>
+    <script>
+        let x = 1 + 1;
+        console.log(x);
+
+        let y = 10 % 3;
+        console.log(y);
+
+        x = x + 1;
+        console.log(x);
+        x += 1;
+        console.log(x);
+
+        let z = y == 1;
+        console.log(z);
+
+        z = y < x;
+        console.log(z);
+
+        z = !z;  // "not" should only be applied to boolean values
+        console.log(z);
+
+        x--;
+        console.log(x);
+        x++;
+        console.log(x);
+
+        // logical
+        let a = false && true;  // and
+        console.log(a);
+
+        a = false || true;  // or
+        console.log(a);
+
+        // let user enter two numbers, return multiplication
+        // user entering: prompt('question_string', 'default_string');
+        let n1 = prompt("Please enter the first number", '');
+        let n2 = prompt("Please enter the second number", '');
+        let total = n1 * n2;
+        console.log('The result is:');
+        console.log(total);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript Functions</title>
+</head>
+
+<body>
+    <script>
+
+        let obj1 = {};  // empty object
+        console.log(obj1);
+        obj1 = Object();  // empty object
+        console.log(obj1);
+
+        obj1.age = 23;
+        obj1.name = 'Joseph';
+        obj1.gender = 'Male';
+        obj1.hello = function () {
+            console.log('Hello', this.name + ',', this.age);
+        };
+        console.log(obj1);
+        console.log(obj1.gender);
+        obj1.hello()
+
+        // using JSON
+        let obj2 = {
+            age: 25,
+            name: 'Yang',
+            gender: 'Female',
+            hello: function () {
+                console.log('Hello', this.name + ',', this.age);
+            }
+        };
+        console.log(obj2);
+        console.log(obj2.gender);
+        obj2.hello()
+
+
+    </script>
+</body>
+
+</html>

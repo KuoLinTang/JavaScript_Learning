@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript Arrays</title>
+</head>
+
+<body>
+    <script>
+
+        // create two array objects
+        let grades_01 = [];
+        let grades_02 = Array();
+        console.log(grades_02);
+
+        grades_01.push(1);
+        grades_01.push(2);
+        grades_01.push(3);
+        grades_01.push(4);
+
+        console.log(grades_01);
+        console.log(grades_01.length);
+
+        let grades_03 = [1, 2, 3, 4, 5];
+        console.log(grades_03);
+        console.log(grades_03[4]);
+
+        // use for loop to get elements of the array
+        // calculate mean
+        let sum = 0;
+        for (let n = 0; n < grades_03.length; n++) {
+            sum += grades_03[n];
+        }
+        let avg = sum / grades_03.length;
+        console.log(sum);
+        console.log(avg);
+
+    </script>
+</body>
+
+</html>

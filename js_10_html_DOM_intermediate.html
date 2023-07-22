@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript HTML DOM Intermediate</title>
+    <style>
+        .text {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>HTML DOM Manipulate Page</h3>
+    <div id="content">Practice manipulating page content</div>
+    <button onclick="change();">Submit</button>
+    <script>
+        // console.log(document.body);
+        function change() {
+            // get tag object
+            let divElement = document.querySelector('#content');
+            // change attribute content
+            divElement.innerHTML = "New content";
+            divElement.className = "text";  // changing class name can change the css style
+            divElement.style.fontSize = "30px";  // directly change style
+            divElement.style.color = "blue";
+        }
+
+    </script>
+</body>
+
+</html>

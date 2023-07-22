@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript HTML DOM Concepts</title>
+</head>
+
+<body>
+    <script>
+        // window object
+        console.log(window);
+        console.log(window.innerWidth, window.innerHeight);
+
+        // screen object
+        console.log(window.screen);
+        console.log(window.screen.width, window.screen.height);
+
+        // get url
+        console.log(window.location.href);
+        // Modify url -> jump to another page
+        // window.location.href = "https://www.google.com";
+
+        // document object
+        console.log(document);  // show page in html
+        console.dir(document);  // show page in structured format (JSON)
+
+        console.log(document.title);
+        document.title = 'New Title';
+
+        // body object
+        console.log(document.body);  // show page in html
+        console.dir(document.body);  // show page in structured format (JSON)
+        console.log(document.body.innerHTML);  // get all contents in the HTML body tag
+        // document.body.innerHTML = 'New Body';
+
+    </script>
+</body>
+
+</html>

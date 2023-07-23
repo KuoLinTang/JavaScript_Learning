@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript Rest Operators</title>
+</head>
+
+<body>
+    <script>
+        // destructuring assignment in Arrays
+        let arr = [1, 2, 3, 4, 5];
+        let [e1, e2, e3, ...e_rest] = arr;
+        console.log(e1, e2, e3);
+        console.log(e_rest);
+
+        // destructuring assignment in Objects
+        let obj = { a1: 1, a2: 2, a3: 3, a4: 4, a5: 5 };
+        let { a1: newA1, a2: newA2, a3: newA3, ...a_rest } = obj;
+        console.log(newA1, newA2, newA3);
+        console.log(a_rest);
+
+        // rest operator in functions
+        function func1(a, b) {
+            console.log(a, b);
+        };
+        func1(4, 3);
+        func1(8, 12);
+
+        // what if I want to enter more numbers
+        function func2(a, b, ...args) {
+            console.log(a, b, args);
+        }
+        func2(1, 2, 3, 4, 5);
+        func2(3, 5, 1, 0, 6, 1, 1, 1);
+
+        // example: add more than 2 numbers
+        function add(a, b, ...args) {
+            let total = a + b;
+            for (let i = 0; i < args.length; i++) {
+                total += args[i];
+            }
+            console.log(total);
+        }
+        add(1, 2, 3, 4, 5);
+        add(3, 5, 1, 0, 6, 1, 1, 1);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript AJAX / XHR</title>
+</head>
+
+<body>
+    <h3>AJAX / XHR Basic Implementation</h3>
+    <button onclick="getData();">Get Data</button>
+    <div id="results"></div>
+    <script>
+        // testing data
+        // https://cwpeng.github.io/live-records-samples/data/products.json
+        function getData() {
+            // use fetch to build connection and get data
+            fetch('https://cwpeng.github.io/live-records-samples/data/products.json')
+                .then(function (response) {
+                    console.log(response);
+                    return response.json();  // convert response body into JSON format (array of objects)
+                    // return response.text();  // convert response body into text
+                }).then(function (data) {
+                    // console.log(data);
+                    divElement = document.querySelector('#results');
+                    divElement.innerHTML = "";  // clear the output
+
+                    for (let i = 0; i < data.length; i++) {
+                        let product = data[i];
+                        divElement.innerHTML += "<div>" + product.name + "," + product.price + "," + product.description + "</div>";  // += allows to append data
+                    };
+                })
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript Arrow Function</title>
+</head>
+
+<body>
+
+    <script>
+        // calculate 1+2+3+...+n
+        // // normal function
+        // function calculate(n) {
+        //     let result = 0;
+
+        //     for (let i = 0; i <= n; i++) {
+        //         result += i;
+        //     };
+
+        //     return result
+        // };
+
+        // arrow function
+        let calculate = (n) => {
+            let result = 0;
+
+            for (let i = 0; i <= n; i++) {
+                result += i;
+            };
+
+            return result
+        }
+
+        let n = prompt('Please enter an integer', '');
+        let result1 = calculate(n);
+
+        n = prompt('Please enter an integer', '');
+        let result2 = calculate(n);
+
+        n = prompt('Please enter an integer', '');
+        let result3 = calculate(n);
+
+        console.log(result1, result2, result3);
+
+        // simplifiable arrow function
+        let multiply = (n1, n2) => (n1 * n2);
+        console.log(multiply(5, 8));
+    </script>
+</body>
+
+</html>

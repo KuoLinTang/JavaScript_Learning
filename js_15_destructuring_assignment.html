@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript Destructuring Assignment</title>
+</head>
+
+<body>
+    <script>
+        // destructuring assignment for Array Data
+        let arr = [1, 2, 3];
+        let [x, y, z] = arr;  // declare and assign at the same time
+        console.log(x, y, z);
+
+        let [a, b, c, d] = arr;  // not assign default value -> undefined
+        console.log(a, b, c, d);
+        [a, b, c, d = 4] = arr;
+        console.log(a, b, c, d);  // assign default value
+
+        arr = [1, 2, 3, 5];
+        [a, b, c, d = 4] = arr;
+        console.log(a, b, c, d);  // overwrite default value
+
+        // Swap two variables
+        let n1 = 3;
+        let n2 = 5;
+        console.log(n1, n2);
+        [n1, n2] = [n2, n1];
+        console.log(n1, n2);
+
+        // ========================================================================
+        // destructuring assignment for Object Data
+        let obj = { xx: 1, yy: 3 };
+        let { xx, yy } = obj;
+        console.log(xx, yy);
+
+        let { xx: aa, yy: bb } = obj;  // assign new variable names
+        console.log(aa, bb);
+
+        let nn, mm, oo;
+        ({ xx: nn, yy: mm } = obj);  // when declaring and assigning are different lines, we need to use "()"
+        console.log(nn, mm);
+
+        ({ xx: nn, yy: mm, zz: oo = 5 } = obj);  // assign default value
+        console.log(nn, mm, oo);
+
+        // Wrap all input arguments of a Function
+        // normal function
+        function add(n1, n2) {
+            console.log(n1 + n2);
+        }
+        add(3, 7);
+
+        // While the NUMBER of arguments becomes larger, we can make input argument an Object
+        function multiply1(args) {
+            console.log(args.n1 * args.n2 * args.n3);
+        }
+        multiply1({ n1: 3, n2: 5, n3: 2 });
+
+        // using Destructuring Assignment on Object
+        function multiply2({ n1: a, n2: b, n3: c }) {
+            console.log(a * b * c);
+        }
+        multiply2({ n1: 3, n2: 5, n3: 2 });
+    </script>
+</body>
+
+</html>
